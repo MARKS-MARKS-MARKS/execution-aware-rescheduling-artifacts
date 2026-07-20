@@ -1,0 +1,3 @@
+S-C: deterministic clustered inspection scenario
+Active tasks: 20; preloaded inactive tasks: 2; robots: 2; candidate service locations per task: 3.
+Inactive tasks are present in the fixed legacy arrays but excluded from the initial execution plan.

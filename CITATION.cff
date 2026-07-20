@@ -1,0 +1,17 @@
+﻿cff-version: 1.2.0
+message: "If you use these experimental artifacts, please cite the associated paper and this dataset."
+type: dataset
+title: "Experimental Artifacts for Execution-Aware Rescheduling for Multi-Robot Inspection with Alternative Service Locations"
+authors:
+  - family-names: "Fang"
+    given-names: "Zhou"
+version: 1.0.0
+url: "https://github.com/MARKS-MARKS-MARKS/execution-aware-rescheduling-artifacts"
+repository-code: "https://github.com/MARKS-MARKS-MARKS/execution-aware-rescheduling-artifacts"
+keywords:
+  - multi-robot inspection
+  - dynamic rescheduling
+  - task allocation
+  - alternative service locations
+  - robot failure
+license: CC-BY-4.0

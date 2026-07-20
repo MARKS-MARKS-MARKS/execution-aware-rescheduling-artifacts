@@ -1,0 +1,38 @@
+﻿# Build products
+build/
+.vs/
+CMakeFiles/
+CMakeCache.txt
+
+# Compiled files
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.cache
+# Python
+__pycache__/
+*.pyc
+.venv/
+# LaTeX generated files
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+# Local editor files
+.vscode/
+.idea/
+# Source-code directories that must not be released
+apps/
+include/
+src/
+legacy/
+archive/

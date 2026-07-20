@@ -1,0 +1,14 @@
+﻿CAC2026 final Release experiment platform
+Measurement date: 2026-07-20 (Asia/Shanghai)
+Operating system: Microsoft Windows 11 Home China 10.0.26200, build 26200
+Processor: 13th Gen Intel(R) Core(TM) i7-13620H
+Processor topology: 10 physical cores, 16 logical processors
+Installed memory: 15.8 GB
+Algorithm threads: 1
+Compiler: Microsoft C/C++ 19.43.34809.0 (cl 14.43.34808)
+Build system: Microsoft Build Engine 17.13.19; CMake 3.30.5-msvc23
+Configuration: x64 Release, C++17
+Configure command: cmake --preset vs2022-release
+Build command: cmake --build --preset vs2022-release
+Experiment command: python .\scripts\run_release_experiments.py
+Runs: 297, using the existing formal run IDs, scenario manifests, seeds, event progress values, objective modes, iteration limits, and wall-clock budgets.

@@ -1,0 +1,74 @@
+{
+  "release_rows": 297,
+  "events": {
+    "new_task_arrival": {
+      "runs": 99,
+      "success": 99
+    },
+    "service_location_invalidation": {
+      "runs": 99,
+      "success": 99
+    },
+    "robot_failure": {
+      "runs": 99,
+      "success": 79
+    }
+  },
+  "methods_minimum_makespan_successful": {
+    "greedy": {
+      "runs": 67,
+      "makespan": 139.0751335464817,
+      "time_ms": 4.170879104477612,
+      "reassigned": 1.8805970149253732,
+      "locations": 1.3134328358208955,
+      "edges": 10.776119402985074
+    },
+    "greedy_ls": {
+      "runs": 67,
+      "makespan": 138.64776084880867,
+      "time_ms": 13.161328358208955,
+      "reassigned": 1.8805970149253732,
+      "locations": 2.1791044776119404,
+      "edges": 13.104477611940299
+    },
+    "dynamic_ails": {
+      "runs": 67,
+      "makespan": 136.4309921217957,
+      "time_ms": 1115.4637194029851,
+      "reassigned": 2.746268656716418,
+      "locations": 3.8805970149253732,
+      "edges": 24.029850746268657
+    },
+    "global_replan": {
+      "runs": 67,
+      "makespan": 141.4880711115917,
+      "time_ms": 1238.7398014925373,
+      "reassigned": 4.850746268656716,
+      "locations": 11.761194029850746,
+      "edges": 46.02985074626866
+    }
+  },
+  "objective_tradeoff_m_c_p50": {
+    "minimum_makespan": {
+      "runs": 9,
+      "makespan": 125.59836328519856,
+      "time_ms": 1030.2064333333333,
+      "reassigned": 2.7777777777777777,
+      "locations": 4.0,
+      "edges": 25.88888888888889
+    },
+    "disruption_aware": {
+      "runs": 9,
+      "makespan": 127.74159824520422,
+      "time_ms": 1031.9673777777778,
+      "reassigned": 1.7777777777777777,
+      "locations": 0.6666666666666666,
+      "edges": 7.888888888888889
+    }
+  },
+  "tradeoff_percent": {
+    "edges_reduction": 69.52789699570815,
+    "reassignment_reduction": 36.0,
+    "makespan_increase": 1.7064194977915221
+  }
+}

@@ -1,0 +1,3 @@
+M-U: deterministic uniform inspection scenario
+Active tasks: 50; preloaded inactive tasks: 5; robots: 4; candidate service locations per task: 4.
+Inactive tasks are present in the fixed legacy arrays but excluded from the initial execution plan.
