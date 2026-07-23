@@ -25,12 +25,19 @@ The study comprises 297 simulation runs covering:
 - three random seeds;
 - four rescheduling methods.
 
+For every seeded configuration, the pre-event static plan is optimized from
+an active-only solver instance. Inactive tasks and their candidate locations
+are retained in a separate arrival pool and cannot influence that static
+optimization. The formal arrival pool contains 10% as many tasks as the
+active set, and a task-arrival event releases the entire pool.
+
 ## Main data
 
 - `data/raw/`: run-level formal outputs.
 - `data/summaries/`: aggregate method, scale, progress, and objective comparisons.
 - `configurations/`: released experimental inputs and manifests.
-- `figures/`: experimental result figures.
+- `figures/experiment_tradeoffs.*` and `figures/progress_sensitivity.*`:
+  current experimental result figures.
 - `documentation/`: artifact scope and numerical-claim audits.
 - `checksums/SHA256SUMS.txt`: SHA-256 hashes of released files.
 
@@ -50,8 +57,8 @@ The released data include:
 
 - 99/99 successful task-arrival cases;
 - 99/99 successful service-location-invalidation cases;
-- 79/99 successful robot-failure cases;
-- 20 structurally infeasible robot-failure cases under the stated
+- 75/99 successful robot-failure cases;
+- 24 structurally infeasible robot-failure runs under the stated
   robot-dependent reachability model.
 
 ## Citation

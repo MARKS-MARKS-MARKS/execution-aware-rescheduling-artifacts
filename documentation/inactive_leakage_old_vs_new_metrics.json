@@ -1,0 +1,514 @@
+{
+  "old": {
+    "release_rows": 297,
+    "common_feasible_primary_cases": 67,
+    "events": {
+      "new_task_arrival": {
+        "runs": 99,
+        "success": 99,
+        "rate_percent": 100.0
+      },
+      "service_location_invalidation": {
+        "runs": 99,
+        "success": 99,
+        "rate_percent": 100.0
+      },
+      "robot_failure": {
+        "runs": 99,
+        "success": 79,
+        "rate_percent": 79.79797979797979
+      }
+    },
+    "structural_failures": 20,
+    "methods_common_feasible_primary": {
+      "greedy": {
+        "runs": 67,
+        "feasible_rate": 93.05555555555556,
+        "makespan": 139.0751335464817,
+        "time_ms": 4.170879104477612,
+        "reassigned": 1.8805970149253732,
+        "locations": 1.3134328358208955,
+        "edges": 10.776119402985074
+      },
+      "greedy_ls": {
+        "runs": 67,
+        "feasible_rate": 93.05555555555556,
+        "makespan": 138.64776084880867,
+        "time_ms": 13.161328358208955,
+        "reassigned": 1.8805970149253732,
+        "locations": 2.1791044776119404,
+        "edges": 13.104477611940299
+      },
+      "dynamic_ails": {
+        "runs": 67,
+        "feasible_rate": 93.05555555555556,
+        "makespan": 136.4309921217957,
+        "time_ms": 1115.4637194029851,
+        "reassigned": 2.746268656716418,
+        "locations": 3.8805970149253732,
+        "edges": 24.029850746268657
+      },
+      "global_replan": {
+        "runs": 67,
+        "feasible_rate": 93.05555555555556,
+        "makespan": 141.4880711115917,
+        "time_ms": 1238.7398014925373,
+        "reassigned": 4.850746268656716,
+        "locations": 11.761194029850746,
+        "edges": 46.02985074626866
+      }
+    },
+    "dails_vs_greedy_aggregate_mean_reduction_percent": 1.9012323463290342,
+    "objective_tradeoff_m_c_p50": {
+      "minimum_makespan": {
+        "runs": 9,
+        "makespan": 125.59836328519856,
+        "time_ms": 1030.2064333333333,
+        "reassigned": 2.7777777777777777,
+        "locations": 4.0,
+        "edges": 25.88888888888889
+      },
+      "disruption_aware": {
+        "runs": 9,
+        "makespan": 127.74159824520422,
+        "time_ms": 1031.9673777777778,
+        "reassigned": 1.7777777777777777,
+        "locations": 0.6666666666666666,
+        "edges": 7.888888888888889
+      }
+    },
+    "tradeoff_percent": {
+      "edges_reduction": 69.52789699570815,
+      "reassignment_reduction": 36.0,
+      "makespan_increase": 1.7064194977915221
+    },
+    "progress_sensitivity_m_c": [
+      {
+        "progress": 0.25,
+        "method": "greedy",
+        "label": "Greedy",
+        "time_ms": 4.067188888888889
+      },
+      {
+        "progress": 0.25,
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "time_ms": 11.672088888888888
+      },
+      {
+        "progress": 0.25,
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "time_ms": 1089.911488888889
+      },
+      {
+        "progress": 0.25,
+        "method": "global_replan",
+        "label": "Global Replan",
+        "time_ms": 1169.0730666666668
+      },
+      {
+        "progress": 0.5,
+        "method": "greedy",
+        "label": "Greedy",
+        "time_ms": 1.9495222222222222
+      },
+      {
+        "progress": 0.5,
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "time_ms": 7.70161111111111
+      },
+      {
+        "progress": 0.5,
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "time_ms": 1030.2064333333333
+      },
+      {
+        "progress": 0.5,
+        "method": "global_replan",
+        "label": "Global Replan",
+        "time_ms": 1082.011511111111
+      },
+      {
+        "progress": 0.75,
+        "method": "greedy",
+        "label": "Greedy",
+        "time_ms": 0.7109888888888889
+      },
+      {
+        "progress": 0.75,
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "time_ms": 5.3043000000000005
+      },
+      {
+        "progress": 0.75,
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "time_ms": 1011.1255111111111
+      },
+      {
+        "progress": 0.75,
+        "method": "global_replan",
+        "label": "Global Replan",
+        "time_ms": 1029.7176555555554
+      }
+    ],
+    "scaling_p50": [
+      {
+        "scale": "S",
+        "method": "greedy",
+        "label": "Greedy",
+        "successful": 13.0,
+        "time_ms": 0.20857692307692308,
+        "cost": 188.81240112257976
+      },
+      {
+        "scale": "S",
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "successful": 13.0,
+        "time_ms": 2.138146153846154,
+        "cost": 188.62452898524214
+      },
+      {
+        "scale": "S",
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "successful": 13.0,
+        "time_ms": 1004.1447307692307,
+        "cost": 186.37319471067954
+      },
+      {
+        "scale": "S",
+        "method": "global_replan",
+        "label": "Global Replan",
+        "successful": 13.0,
+        "time_ms": 1006.3389,
+        "cost": 186.37319471067954
+      },
+      {
+        "scale": "M",
+        "method": "greedy",
+        "label": "Greedy",
+        "successful": 18.0,
+        "time_ms": 2.0044,
+        "cost": 139.97286712194656
+      },
+      {
+        "scale": "M",
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "successful": 18.0,
+        "time_ms": 8.0947,
+        "cost": 139.63966774490302
+      },
+      {
+        "scale": "M",
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "successful": 18.0,
+        "time_ms": 1036.2892222222222,
+        "cost": 135.7582926751994
+      },
+      {
+        "scale": "M",
+        "method": "global_replan",
+        "label": "Global Replan",
+        "successful": 18.0,
+        "time_ms": 1085.9909722222224,
+        "cost": 138.45117771315088
+      },
+      {
+        "scale": "L",
+        "method": "greedy",
+        "label": "Greedy",
+        "successful": 18.0,
+        "time_ms": 10.98081111111111,
+        "cost": 111.34585192833667
+      },
+      {
+        "scale": "L",
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "successful": 18.0,
+        "time_ms": 30.862277777777777,
+        "cost": 110.96863455959239
+      },
+      {
+        "scale": "L",
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "successful": 18.0,
+        "time_ms": 1339.9804833333335,
+        "cost": 109.6150898634402
+      },
+      {
+        "scale": "L",
+        "method": "global_replan",
+        "label": "Global Replan",
+        "successful": 18.0,
+        "time_ms": 1698.6781666666666,
+        "cost": 119.98354659626797
+      }
+    ]
+  },
+  "new": {
+    "release_rows": 297,
+    "common_feasible_primary_cases": 66,
+    "events": {
+      "new_task_arrival": {
+        "runs": 99,
+        "success": 99,
+        "rate_percent": 100.0
+      },
+      "service_location_invalidation": {
+        "runs": 99,
+        "success": 99,
+        "rate_percent": 100.0
+      },
+      "robot_failure": {
+        "runs": 99,
+        "success": 75,
+        "rate_percent": 75.75757575757575
+      }
+    },
+    "structural_failures": 24,
+    "methods_common_feasible_primary": {
+      "greedy": {
+        "runs": 66,
+        "feasible_rate": 91.66666666666667,
+        "makespan": 144.7096532262578,
+        "time_ms": 4.16300303030303,
+        "reassigned": 1.9545454545454546,
+        "locations": 1.3333333333333333,
+        "edges": 11.090909090909092
+      },
+      "greedy_ls": {
+        "runs": 66,
+        "feasible_rate": 91.66666666666667,
+        "makespan": 144.27566474565276,
+        "time_ms": 13.344262121212122,
+        "reassigned": 1.9545454545454546,
+        "locations": 2.015151515151515,
+        "edges": 13.090909090909092
+      },
+      "dynamic_ails": {
+        "runs": 66,
+        "feasible_rate": 91.66666666666667,
+        "makespan": 141.70455678757708,
+        "time_ms": 1077.5869424242426,
+        "reassigned": 2.6818181818181817,
+        "locations": 3.287878787878788,
+        "edges": 22.060606060606062
+      },
+      "global_replan": {
+        "runs": 66,
+        "feasible_rate": 91.66666666666667,
+        "makespan": 146.07265633021703,
+        "time_ms": 1188.0707863636364,
+        "reassigned": 4.7272727272727275,
+        "locations": 10.530303030303031,
+        "edges": 44.75757575757576
+      }
+    },
+    "dails_vs_greedy_aggregate_mean_reduction_percent": 2.076638546000923,
+    "objective_tradeoff_m_c_p50": {
+      "minimum_makespan": {
+        "runs": 9,
+        "makespan": 134.7185649890061,
+        "time_ms": 1030.800188888889,
+        "reassigned": 3.111111111111111,
+        "locations": 3.7777777777777777,
+        "edges": 21.444444444444443
+      },
+      "disruption_aware": {
+        "runs": 9,
+        "makespan": 136.675036657753,
+        "time_ms": 1023.6002222222222,
+        "reassigned": 2.2222222222222223,
+        "locations": 0.2222222222222222,
+        "edges": 7.666666666666667
+      }
+    },
+    "tradeoff_percent": {
+      "edges_reduction": 64.24870466321244,
+      "reassignment_reduction": 28.57142857142857,
+      "makespan_increase": 1.4522658171919816
+    },
+    "progress_sensitivity_m_c": [
+      {
+        "progress": 0.25,
+        "method": "greedy",
+        "label": "Greedy",
+        "time_ms": 4.331788888888889
+      },
+      {
+        "progress": 0.25,
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "time_ms": 12.060577777777777
+      },
+      {
+        "progress": 0.25,
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "time_ms": 1062.6402888888888
+      },
+      {
+        "progress": 0.25,
+        "method": "global_replan",
+        "label": "Global Replan",
+        "time_ms": 1156.4316666666666
+      },
+      {
+        "progress": 0.5,
+        "method": "greedy",
+        "label": "Greedy",
+        "time_ms": 1.8503222222222222
+      },
+      {
+        "progress": 0.5,
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "time_ms": 7.953333333333333
+      },
+      {
+        "progress": 0.5,
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "time_ms": 1030.800188888889
+      },
+      {
+        "progress": 0.5,
+        "method": "global_replan",
+        "label": "Global Replan",
+        "time_ms": 1079.790177777778
+      },
+      {
+        "progress": 0.75,
+        "method": "greedy",
+        "label": "Greedy",
+        "time_ms": 0.8336888888888888
+      },
+      {
+        "progress": 0.75,
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "time_ms": 5.154088888888889
+      },
+      {
+        "progress": 0.75,
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "time_ms": 1009.8497111111111
+      },
+      {
+        "progress": 0.75,
+        "method": "global_replan",
+        "label": "Global Replan",
+        "time_ms": 1027.4672111111113
+      }
+    ],
+    "scaling_p50": [
+      {
+        "scale": "S",
+        "method": "greedy",
+        "label": "Greedy",
+        "successful": 12.0,
+        "time_ms": 0.19739166666666666,
+        "cost": 194.0245340864495
+      },
+      {
+        "scale": "S",
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "successful": 12.0,
+        "time_ms": 2.0459666666666667,
+        "cost": 194.0245340864495
+      },
+      {
+        "scale": "S",
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "successful": 12.0,
+        "time_ms": 1003.0856083333333,
+        "cost": 193.76287585967557
+      },
+      {
+        "scale": "S",
+        "method": "global_replan",
+        "label": "Global Replan",
+        "successful": 12.0,
+        "time_ms": 1005.7900333333333,
+        "cost": 193.76287585967557
+      },
+      {
+        "scale": "M",
+        "method": "greedy",
+        "label": "Greedy",
+        "successful": 18.0,
+        "time_ms": 1.8052333333333332,
+        "cost": 147.55888839423883
+      },
+      {
+        "scale": "M",
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "successful": 18.0,
+        "time_ms": 8.086005555555555,
+        "cost": 146.940703514985
+      },
+      {
+        "scale": "M",
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "successful": 18.0,
+        "time_ms": 1025.092661111111,
+        "cost": 141.73827831622705
+      },
+      {
+        "scale": "M",
+        "method": "global_replan",
+        "label": "Global Replan",
+        "successful": 18.0,
+        "time_ms": 1082.1004888888888,
+        "cost": 145.18160359392132
+      },
+      {
+        "scale": "L",
+        "method": "greedy",
+        "label": "Greedy",
+        "successful": 18.0,
+        "time_ms": 10.744777777777777,
+        "cost": 114.25914814253696
+      },
+      {
+        "scale": "L",
+        "method": "greedy_ls",
+        "label": "Greedy+LS",
+        "successful": 18.0,
+        "time_ms": 30.871644444444446,
+        "cost": 113.86978143367469
+      },
+      {
+        "scale": "L",
+        "method": "dynamic_ails",
+        "label": "D-AILS",
+        "successful": 18.0,
+        "time_ms": 1221.0907222222222,
+        "cost": 112.62211662531391
+      },
+      {
+        "scale": "L",
+        "method": "global_replan",
+        "label": "Global Replan",
+        "successful": 18.0,
+        "time_ms": 1511.6829333333333,
+        "cost": 118.90011872354904
+      }
+    ]
+  }
+}

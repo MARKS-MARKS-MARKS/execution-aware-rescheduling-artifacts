@@ -1,0 +1,22 @@
+{
+  "release_integrity": {
+    "rows": 297,
+    "unique_rows": 297,
+    "successful": 273,
+    "failed": 24,
+    "skipped": 0,
+    "successful_validator_checks": "PASS",
+    "structural_failure_reasons": "PASS",
+    "finite_numeric_fields": "PASS",
+    "shared_static_plan_state_and_event": "PASS"
+  },
+  "old_vs_new": {
+    "manifest_cases": 72,
+    "static_plan_changed_cases": 72,
+    "arrival_membership_changed_cases": 0,
+    "invalidated_group_changed_cases": 17,
+    "invalidated_node_changed_cases": 19,
+    "failed_robot_changed_cases": 13,
+    "comparison_csv": "results\\experiments\\release\\inactive_leakage_manifest_comparison.csv"
+  }
+}

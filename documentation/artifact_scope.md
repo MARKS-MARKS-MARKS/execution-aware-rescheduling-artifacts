@@ -6,6 +6,8 @@
 - aggregate result tables;
 - experimental instance and event configuration files where available;
 - experimental figures and figure source data;
+- paired full and active-only static-optimization instance definitions;
+- active-only release integrity and old-vs-new event-target audits;
 - metric and numerical-claim audit documentation;
 - SHA-256 integrity hashes.
 

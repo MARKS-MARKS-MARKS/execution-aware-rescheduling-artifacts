@@ -4,6 +4,7 @@
   "workspace_width": 100,
   "workspace_height": 100,
   "generation_seed": 24001,
+  "active_only_solver_instance": "instances/inspection/formal/M-U.active.gtsp",
   "active_group_ids": [
     0,
     1,
