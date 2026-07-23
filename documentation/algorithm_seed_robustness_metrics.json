@@ -1,0 +1,82 @@
+{
+  "method_metrics": {
+    "dynamic_ails": {
+      "aggregate_greedy_mean_cost": 144.7096532262578,
+      "aggregate_mean_reduction_percent": 2.0363755099917076,
+      "aggregate_seed_averaged_method_mean_cost": 141.76282128736437,
+      "algorithm_seeds_per_scenario": 10,
+      "bootstrap_ci_high_percent": 2.566959877583874,
+      "bootstrap_ci_low_percent": 1.2138185213302368,
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 20260723,
+      "loss_count": 0,
+      "mean_paired_relative_reduction_percent": 1.856777317096401,
+      "median_paired_relative_reduction_percent": 0.7016098212857216,
+      "method": "dynamic_ails",
+      "scenario_count": 66,
+      "tie_count": 20,
+      "tie_tolerance_absolute": 1e-09,
+      "win_count": 46,
+      "within_seed_sd_max": 7.537864145847478,
+      "within_seed_sd_mean": 0.962687099220297,
+      "within_seed_sd_median": 0.14023760115809747,
+      "within_seed_sd_min": 0.0
+    },
+    "global_replan": {
+      "aggregate_greedy_mean_cost": 144.7096532262578,
+      "aggregate_mean_reduction_percent": -1.1617509404647772,
+      "aggregate_seed_averaged_method_mean_cost": 146.39081898355718,
+      "algorithm_seeds_per_scenario": 10,
+      "bootstrap_ci_high_percent": -0.4464632667516255,
+      "bootstrap_ci_low_percent": -4.221425690937214,
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 20260723,
+      "loss_count": 28,
+      "mean_paired_relative_reduction_percent": -2.30788409024975,
+      "median_paired_relative_reduction_percent": 0.0,
+      "method": "global_replan",
+      "scenario_count": 66,
+      "tie_count": 13,
+      "tie_tolerance_absolute": 1e-09,
+      "win_count": 25,
+      "within_seed_sd_max": 11.340120816374275,
+      "within_seed_sd_mean": 2.2395711728319783,
+      "within_seed_sd_median": 1.1980129463082072,
+      "within_seed_sd_min": 0.0
+    }
+  },
+  "statistics": {
+    "bootstrap": {
+      "interval": "percentile 95%",
+      "resamples": 10000,
+      "seed": 20260723,
+      "unit": "66 scenario-level paired relative reductions"
+    },
+    "route_cost_sd_definition": "sample standard deviation over 10 algorithm seeds within each fixed scenario",
+    "tie_tolerance_absolute": 1e-09
+  },
+  "study": {
+    "algorithm_seed_role": "D-AILS and Global Replan randomized search components",
+    "algorithm_seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009
+    ],
+    "common_feasible_scenarios": 66,
+    "description": "fixed-scenario independent algorithm-seed robustness study",
+    "formal_release_runs_unchanged": 297,
+    "methods": [
+      "dynamic_ails",
+      "global_replan"
+    ],
+    "run_count": 1320,
+    "scenario_seed_role": "static plans, event manifests, progress states, and scenario identity"
+  }
+}

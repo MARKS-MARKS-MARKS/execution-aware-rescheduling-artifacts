@@ -15,6 +15,10 @@ The repository provides:
 - aggregation and plotting scripts for paper Tables II--III and Figs. 3--4;
 - metric definitions, numerical-claim audits, and integrity checks.
 
+It also contains a separate algorithm-seed robustness study and complete
+D-AILS parameter/pseudocode documentation. The original formal benchmark and
+the additional study are intentionally kept distinct.
+
 ## Experimental matrix
 
 The study comprises 297 simulation runs covering:
@@ -32,15 +36,27 @@ are retained in a separate arrival pool and cannot influence that static
 optimization. The formal arrival pool contains 10% as many tasks as the
 active set, and a task-arrival event releases the entire pool.
 
+The additional robustness study fixes the 66 primary-objective scenario cases
+that were feasible for all four methods, then reruns D-AILS and Global Replan
+with algorithm seeds 1000--1009 while keeping the scenario seeds, static
+plans, event manifests, progress states, objective, and search limits fixed.
+It therefore contains exactly 1320 additional runs (66 x 2 x 10) and does not
+replace or enter the 297-run paper tables.
+
 ## Main data
 
 - `data/raw/`: run-level formal outputs.
 - `data/summaries/`: aggregate method, scale, progress, and objective comparisons.
+- `data/raw/algorithm_seed_runs.csv`: the 1320 additional robustness runs.
+- `data/summaries/algorithm_seed_scenario_summary.csv` and
+  `algorithm_seed_method_summary.csv`: seed-distribution summaries.
 - `configurations/`: released experimental inputs and manifests.
 - `figures/experiment_tradeoffs.*` and `figures/progress_sensitivity.*`:
   current experimental result figures.
 - `scripts/`: read-only paper aggregation, table export, and plotting code.
 - `documentation/`: artifact scope and numerical-claim audits.
+- `documentation/dails_parameters.md` and `dails_pseudocode.md`: complete
+  formal D-AILS settings and implementation-faithful pseudocode.
 - `checksums/SHA256SUMS.txt`: SHA-256 hashes of released files.
 
 ## Reproduce the paper aggregates
@@ -79,16 +95,40 @@ means:
 
 They are not means of per-case percentages.
 
+## Reproduce the algorithm-seed statistics
+
+The robustness aggregation uses only the published 1320-row CSV and the
+published formal Greedy baseline:
+
+```text
+python scripts/aggregate_algorithm_seed_robustness.py
+```
+
+It validates row count, unique identities, finite values, success status, and
+all released validator flags before rebuilding the scenario summary, method
+summary, and metrics JSON under `generated/algorithm_seed_robustness/`.
+The reported mean paired relative reduction is the arithmetic mean of 66
+scenario-level paired percentages. The aggregate-mean reduction compares the
+two aggregate arithmetic means. The 95% interval is a fixed-seed percentile
+bootstrap with 10,000 resamples of the 66 paired scenario reductions.
+
+`scripts/run_algorithm_seed_robustness.py` records the exact solver command
+matrix. It requires a separately built compatible `cac_experiment` executable
+and uses the released frozen manifests and active-only static-plan caches; it
+writes only under `generated/` and never overwrites the published 297-run or
+1320-run CSVs.
+
 ## Artifact limitation
 
 This release does **not** include the optimization source code, proprietary or
-legacy implementation files, compiled executables, or scripts for rerunning
-the optimization algorithms.
+legacy implementation files, or compiled executables. The included robustness
+runner is a protocol driver and therefore requires a separately built
+compatible executable.
 
 The artifact supports traceability and independent reproduction of the paper
-aggregates, tables, and experimental figures from the published run-level
-outputs. It does not support rerunning the optimization algorithms from
-source.
+aggregates, tables, experimental figures, and algorithm-seed statistics from
+the published run-level outputs. It does not support rebuilding the
+optimization executable from source.
 
 ## Reported outcomes
 

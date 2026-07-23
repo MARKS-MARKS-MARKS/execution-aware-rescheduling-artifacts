@@ -1,0 +1,11 @@
+{
+  "scenario_id": "M_C__service_location_invalidation__p050__seed1",
+  "instance": "instances/inspection/formal/M-C.gtsp",
+  "scenario": "service_location_invalidation",
+  "progress": 0.5,
+  "seed": 1,
+  "released_group_ids": [],
+  "invalidated_group_id": 36,
+  "invalidated_node_id": 144,
+  "failed_robot_id": -1
+}

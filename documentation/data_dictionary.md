@@ -12,7 +12,11 @@ The precise set of columns may vary among the released CSV files.
 | method | Rescheduling method | -- |
 | event_type | Dynamic event type | -- |
 | progress | Execution progress when the event is applied | fraction |
-| seed | Random seed | -- |
+| seed | Scenario seed (legacy 297-run field) | -- |
+| scenario_seed | Seed controlling static plan, event manifest, progress state, and scenario identity in the 1320-run robustness study | -- |
+| algorithm_seed | Independent seed controlling randomized D-AILS/Global Replan search components | -- |
+| scenario_manifest_identifier | Identifier of the fixed event realization | -- |
+| required_residual_task_ids | Required, unfinished task identifiers after applying the fixed event | semicolon-separated IDs |
 | status | Successful or structurally infeasible terminal outcome | -- |
 | makespan | Dynamic completion makespan | normalized distance/time |
 | replanning_time_ms | Online replanning time after event application | ms |
@@ -33,3 +37,17 @@ candidate nodes used by the pre-event static optimizer.
   optional service-location-change count.
 - Error bars in the paper denote one standard deviation, not confidence
   intervals.
+
+## Algorithm-seed robustness files
+
+- `algorithm_seed_runs.csv` contains exactly 1320 successful rows:
+  66 fixed scenario cases, two methods, and ten algorithm seeds.
+- `algorithm_seed_scenario_summary.csv` contains one row per fixed
+  scenario-method pair. Route-cost and online-time columns report the mean,
+  sample standard deviation, median, minimum, maximum, and coefficient of
+  variation over the ten algorithm seeds.
+- `algorithm_seed_method_summary.csv` distinguishes the mean paired relative
+  reduction from the aggregate-mean reduction and reports the fixed-seed
+  percentile bootstrap interval.
+- `algorithm_seed_robustness_metrics.json` records the same method-level
+  results together with the tie tolerance, bootstrap seed, and resample count.

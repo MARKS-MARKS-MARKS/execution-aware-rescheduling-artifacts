@@ -1,0 +1,11 @@
+{
+  "scenario_id": "S_U__robot_failure__p050__seed1",
+  "instance": "instances/inspection/formal/S-U.gtsp",
+  "scenario": "robot_failure",
+  "progress": 0.5,
+  "seed": 1,
+  "released_group_ids": [],
+  "invalidated_group_id": -1,
+  "invalidated_node_id": -1,
+  "failed_robot_id": 0
+}

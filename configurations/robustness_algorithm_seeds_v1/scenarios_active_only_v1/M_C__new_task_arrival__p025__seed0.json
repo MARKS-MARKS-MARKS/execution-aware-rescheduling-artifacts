@@ -1,0 +1,11 @@
+{
+  "scenario_id": "M_C__new_task_arrival__p025__seed0",
+  "instance": "instances/inspection/formal/M-C.gtsp",
+  "scenario": "new_task_arrival",
+  "progress": 0.25,
+  "seed": 0,
+  "released_group_ids": [50, 51, 52, 53, 54],
+  "invalidated_group_id": -1,
+  "invalidated_node_id": -1,
+  "failed_robot_id": -1
+}

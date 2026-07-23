@@ -12,6 +12,13 @@
 - read-only aggregation scripts for the paper metrics and Tables II--III;
 - plotting scripts for paper Figs. 3--4;
 - a unified run-level-output reproduction entry point;
+- 1320 additional fixed-scenario algorithm-seed runs, their summaries, and
+  an independently executable aggregation script;
+- frozen event manifests and active-only static-plan caches used by the
+  algorithm-seed study;
+- D-AILS formal parameters and implementation-faithful pseudocode;
+- a robustness protocol runner for use with a separately built compatible
+  executable;
 - SHA-256 integrity hashes.
 
 ## Not included
@@ -24,7 +31,7 @@
 - debugging logs;
 - local development-environment files;
 - third-party paper illustrations;
-- solver rerun scripts and complete end-to-end algorithm reproduction.
+- the optimization executable or complete end-to-end algorithm reproduction.
 
 ## Reproducibility statement
 
@@ -40,3 +47,15 @@ The scripts never invoke the solver and write only to `generated/`. Because
 the optimization implementation is not included, the artifact does not
 provide complete end-to-end computational reproducibility of the 297 solver
 runs.
+
+The separate 1320-run robustness statistics can be rebuilt from the published
+CSV and formal Greedy baseline by running:
+
+```text
+python scripts/aggregate_algorithm_seed_robustness.py
+```
+
+This reconstruction validates the released rows and writes only to
+`generated/algorithm_seed_robustness/`. The protocol runner documents the
+exact 66 x 2 x 10 command matrix but requires a separately built compatible
+executable.
