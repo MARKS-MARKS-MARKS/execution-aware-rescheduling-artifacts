@@ -12,6 +12,7 @@ The repository provides:
 - aggregate tables used for the reported numerical comparisons;
 - instance, scenario, event, and experiment configuration files where available;
 - source data and vector figures associated with the experimental results;
+- aggregation and plotting scripts for paper Tables II--III and Figs. 3--4;
 - metric definitions, numerical-claim audits, and integrity checks.
 
 ## Experimental matrix
@@ -38,18 +39,56 @@ active set, and a task-arrival event releases the entire pool.
 - `configurations/`: released experimental inputs and manifests.
 - `figures/experiment_tradeoffs.*` and `figures/progress_sensitivity.*`:
   current experimental result figures.
+- `scripts/`: read-only paper aggregation, table export, and plotting code.
 - `documentation/`: artifact scope and numerical-claim audits.
 - `checksums/SHA256SUMS.txt`: SHA-256 hashes of released files.
+
+## Reproduce the paper aggregates
+
+The reproduction entry point reads only
+`data/raw/formal_release_raw.csv`. It validates the 297-row active-only
+Release matrix, reconstructs the common-feasible primary set and paper
+metrics, and generates Tables II--III and Figs. 3--4 under the ignored
+`generated/` directory:
+
+```text
+python -m pip install -r requirements.txt
+python scripts/reproduce_paper_artifacts.py
+```
+
+Expected outputs include:
+
+- `generated/metrics/formal_release_paper_metrics.json`;
+- `generated/tables/event_tradeoff.tex` and `method_results.tex`;
+- CSV data for both tables and both figures;
+- `generated/figures/experiment_tradeoffs.pdf/.svg`;
+- `generated/figures/progress_sensitivity.pdf/.svg`;
+- `generated/reproduction_summary.json`.
+
+The scripts require Python 3.8 or later, Matplotlib 3.7--3.x, and Times New
+Roman to reproduce the manuscript font. They use relative paths, make no
+network requests, do not invoke a solver, and do not overwrite the released
+run-level outputs.
+
+Percentage changes reported by the scripts compare aggregate arithmetic
+means:
+
+```text
+(baseline mean - alternative mean) / baseline mean * 100
+```
+
+They are not means of per-case percentages.
 
 ## Artifact limitation
 
 This release does **not** include the optimization source code, proprietary or
-legacy implementation files, compiled executables, or complete end-to-end
-reproduction scripts.
+legacy implementation files, compiled executables, or scripts for rerunning
+the optimization algorithms.
 
-The artifact supports traceability and independent verification of the
-reported numerical values, but it does not currently support rerunning the
-optimization algorithms from source.
+The artifact supports traceability and independent reproduction of the paper
+aggregates, tables, and experimental figures from the published run-level
+outputs. It does not support rerunning the optimization algorithms from
+source.
 
 ## Reported outcomes
 

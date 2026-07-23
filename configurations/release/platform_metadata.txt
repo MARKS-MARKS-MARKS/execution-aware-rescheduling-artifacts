@@ -11,5 +11,5 @@ Configuration: x64 Release, C++17
 Configure command: cmake --preset vs2022-release
 Build command: cmake --build --preset vs2022-release
 Experiment command: python .\scripts\run_release_experiments.py --formal --force
-Release executable: E:\MyPaper\CAC2026\code\build\vs2022-release\Release\cac_experiment.exe
+Release executable: cac_experiment.exe (x64 Release build)
 Runs: 297, using the existing formal run IDs, seeds, event progress values, objective modes, iteration limits, and wall-clock budgets. Static plans and event manifests were regenerated from active-only static-optimization inputs.
